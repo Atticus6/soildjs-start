@@ -1,4 +1,5 @@
 import path from "path";
+import { analyzer } from "vite-bundle-analyzer";
 
 import { defineConfig } from "vite";
 import solid from "vite-plugin-solid";
@@ -10,6 +11,7 @@ export default defineConfig({
     tailwindcss(),
     TanStackRouterVite({ target: "solid", autoCodeSplitting: true }),
     solid(),
+    analyzer(),
   ],
   resolve: {
     alias: {
